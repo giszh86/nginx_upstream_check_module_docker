@@ -24,3 +24,8 @@ cd nginx_upstream_check_module_docker
 
 * access to http://localhost/nginx. you can check status of upstream servers
 ![Screenshot from 2024-06-19 22-19-17](https://github.com/johnsuhr4542/nginx_upstream_check_module_docker/assets/48673909/40707b8e-fd42-4870-9d78-0972a99d8a42)
+
+## Disclaimer
+* refered [https://github.com/yaoweibin/nginx_upstream_check_module](https://github.com/yaoweibin/nginx_upstream_check_module) repository
+* built NGINX module not tested.
+* other NGINX version may be incompatible.
