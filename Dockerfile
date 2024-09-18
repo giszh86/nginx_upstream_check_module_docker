@@ -1,7 +1,7 @@
 ARG BASE_IMAGE=ubuntu:jammy
 FROM ${BASE_IMAGE} as builder
 
-ARG NGINX_VERSION=1.26.1
+ARG NGINX_VERSION=1.27.1
 ENV DEBIAND_FRONTEND=noninteractive
 
 RUN apt-get update \
