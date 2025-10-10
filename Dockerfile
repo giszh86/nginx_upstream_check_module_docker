@@ -1,7 +1,7 @@
 ARG BASE_IMAGE=ubuntu:jammy
 FROM ${BASE_IMAGE} as builder
 
-ARG NGINX_VERSION=1.27.1
+ARG NGINX_VERSION=1.29.2
 ENV DEBIAND_FRONTEND=noninteractive
 
 RUN apt-get update \
@@ -11,10 +11,10 @@ RUN wget https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \
  && tar xvfz nginx-$NGINX_VERSION.tar.gz \
  && rm -f nginx-$NGINX_VERSION.tar.get \
  && mv nginx-$NGINX_VERSION nginx \
- && git clone https://github.com/yaoweibin/nginx_upstream_check_module.git
+ && git clone https://github.com/Levan-Medoshvili/nginx_upstream_check_module.git
 
 RUN cd /nginx \
- && patch -p1 < /nginx_upstream_check_module/check_1.20.1+.patch \
+ && patch -p1 < /nginx_upstream_check_module/check_1.26.3+.patch \
  && ./configure \
     --prefix=/etc/nginx \
     --sbin-path=/usr/sbin/nginx \
