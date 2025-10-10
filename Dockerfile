@@ -14,7 +14,7 @@ RUN wget https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \
  && git clone https://github.com/Levan-Medoshvili/nginx_upstream_check_module.git
 
 RUN cd /nginx \
- && patch -p1 < /nginx_upstream_check_module/check_1.26.3+.patch \
+ && patch -p1 < /nginx_upstream_check_module/check_1.20.1+.patch \
  && ./configure \
     --prefix=/etc/nginx \
     --sbin-path=/usr/sbin/nginx \
